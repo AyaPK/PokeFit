@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".activities.introductionActivities.FirstTimePlayerPromptForFitnessActivity">
+
+    <ImageView
+        android:id="@+id/oakDisplayArea"
+        android:layout_width="196dp"
+        android:layout_height="393dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="49dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/oak" />
+
+    <uk.co.ayaspace.pokefit.utils.Typewriter
+        android:id="@+id/typewriter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oakDisplayArea" />
+
+    <ImageView
+        android:id="@+id/fitnessCheckerSnorlaxImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onLowFitnessButtonPressed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typewriter"
+        app:srcCompat="@drawable/lowactivitybutton" />
+
+    <ImageView
+        android:id="@+id/fitnessCheckerMeowthImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="onMedFitnessButtonPressed"
+        app:layout_constraintEnd_toStartOf="@+id/fitnessCheckerMachokeImage"
+        app:layout_constraintStart_toEndOf="@+id/fitnessCheckerSnorlaxImage"
+        app:layout_constraintTop_toBottomOf="@+id/typewriter"
+        app:srcCompat="@drawable/medactivitybutton" />
+
+    <ImageView
+        android:id="@+id/fitnessCheckerMachokeImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onHighFitnessButtonPressed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typewriter"
+        app:srcCompat="@drawable/highactivitybutton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

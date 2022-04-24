@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="uk.co.ayaspace.pokefit.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_party"
+        android:name="uk.co.ayaspace.pokefit.ui.party.PartyFragment"
+        android:label="@string/title_party"
+        tools:layout="@layout/fragment_party" />
+
+    <fragment
+        android:id="@+id/navigation_daycare"
+        android:name="uk.co.ayaspace.pokefit.ui.daycare.DaycareFragment"
+        android:label="@string/title_daycare"
+        tools:layout="@layout/fragment_daycare_empty" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_player_settings"
+        android:name="uk.co.ayaspace.pokefit.ui.playerSettings.PlayerSettingsFragment"
+        android:label="@string/title_player_settings"
+        tools:layout="@layout/fragment_player_settings" />
+</navigation>

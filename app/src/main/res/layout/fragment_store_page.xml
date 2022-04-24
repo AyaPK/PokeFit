@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ui.main.PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="monospace"
+        android:text="Welcome to the Pokémart!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/powerAnkletImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
+        app:srcCompat="@drawable/zzpowerankle" />
+
+    <TextView
+        android:id="@+id/powerAnkletTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Power Anklet"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/powerAnkletImageView" />
+
+    <Button
+        android:id="@+id/powerAnkletButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="55dp"
+        android:text="₽1000"
+        app:layout_constraintEnd_toStartOf="@+id/powerBandButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/powerAnkletTextView" />
+
+    <ImageView
+        android:id="@+id/powerBandImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/powerAnkletImageView"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
+        app:srcCompat="@drawable/zzpowerband" />
+
+    <TextView
+        android:id="@+id/powerBandTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Power Band"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/powerAnkletTextView"
+        app:layout_constraintTop_toBottomOf="@+id/powerBandImageView" />
+
+    <Button
+        android:id="@+id/powerBandButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="₽1000"
+        app:layout_constraintStart_toEndOf="@+id/powerAnkletButton"
+        app:layout_constraintTop_toBottomOf="@+id/powerBandTextView" />
+
+    <ImageView
+        android:id="@+id/powerBeltImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/powerBandImageView"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
+        app:srcCompat="@drawable/zzpowerbelt" />
+
+    <TextView
+        android:id="@+id/powerBeltTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Power Belt"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/powerBandTextView"
+        app:layout_constraintTop_toBottomOf="@+id/powerBeltImageView" />
+
+    <Button
+        android:id="@+id/powerBeltButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="10dp"
+        android:text="₽1000"
+        app:layout_constraintStart_toEndOf="@+id/powerBandButton"
+        app:layout_constraintTop_toBottomOf="@+id/powerBeltTextView" />
+
+    <ImageView
+        android:id="@+id/powerLensImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/powerAnkletButton"
+        app:srcCompat="@drawable/zzpowerlens" />
+
+    <TextView
+        android:id="@+id/powerLensTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Power Lens"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/powerLensImageView" />
+
+    <Button
+        android:id="@+id/powerLensButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:text="₽1000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/powerLensTextView" />
+
+    <ImageView
+        android:id="@+id/powerWaistImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/powerLensImageView"
+        app:layout_constraintTop_toBottomOf="@+id/powerBandButton"
+        app:srcCompat="@drawable/zzpowerwaist" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

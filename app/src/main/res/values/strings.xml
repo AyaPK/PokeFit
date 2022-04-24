@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">PokeFit</string>
+
+    <!--
+      Variables:
+      pn$v - Player's Name
+      cf$v - Current fitness
+      df$v - Desired fitness
+      cs$V - Chosen starter
+    -->
+
+    <string-array name="oak_introduction_speech_dialogue">
+        <item>Welcome to the world of Pokémon!</item>
+        <item>My name is Oak! But you can just call me Prof! This world is inhabited by creatures called Pokémon!</item>
+        <item>For some people, Pokémon are pets. Others use them for fights.</item>
+        <item>Myself… I breed Pokémon as a profession.</item>
+        <item>I have developed a special type of Pokémon training to help me with my own fitness regime.</item>
+        <item>This means I can benefit the other trainers in our world by providing them with powerful Pokémon!</item>
+        <item>First, what is your name?</item>
+        <item>~~PromptingForPlayerName~~</item>
+        <item>Ah, so, your name is pn$v!</item>
+        <item>Let\ ’s start getting you in shape with some Pokémon breeding!</item>
+        <item>Remember that with enough hard work, even a Magikarp can turn into the powerful Gyarados, and you can do the same!</item>
+        <item>~~PromptingForPlayerCurrentFitness~~</item>
+        <item>Ah, so you currently consider yourself to be cf$v…</item>
+        <item>Now for your first steps in to the wonderful world of Pokémon breeding!</item>
+        <item>Take a deep breath and get ready, your fitness regime is about to begin!</item>
+    </string-array>
+
+    <string-array name="oak_prompt_for_name_dialogue">
+        <item>First, what is your name?</item>
+
+    </string-array>
+
+    <string name="popup_dialog_prompt_text">Please type something</string>
+    <string name="steps_left_till_you_can_hatch_your_egg">10,000 steps left until you can hatch your egg</string>
+    <string name="steps_left_till_your_egg_is_hatched">10,000 steps left until your egg is hatched</string>
+    <string name="hatch">Hatch</string>
+
+    <string-array name="age_band">
+        <item>13-17</item>
+        <item>18-23</item>
+        <item>24-29</item>
+        <item>30-39</item>
+        <item>40-49</item>
+        <item>50+</item>
+    </string-array>
+
+    <string-array name="current_activity_level">
+        <item>Snorlax</item>
+        <item>Slowpoke</item>
+        <item>Meowth</item>
+        <item>Hitmonchan</item>
+        <item>Machoke</item>
+    </string-array>
+
+    <string-array name="desired_activity_level">
+        <item>I want the game to be comfy and easy to play</item>
+        <item>I\'ll do my best, I want no regrets </item>
+        <item>I want to be the very best</item>
+    </string-array>
+    <string name="title_activity_main_nav">MainActivityNav</string>
+    <string name="title_home">Home</string>
+    <string name="title_party">Party</string>
+    <string name="title_daycare">Day Care</string>
+    <string name="player_settings">Player</string>
+    <string name="title_player_settings">PlayerSettingsFragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="daycare">daycare</string>
+    <string name="bulbasaur">Bulbasaur</string>
+    <string name="hp_iv">HP IV:</string>
+    <string name="attack_iv">Attack IV:</string>
+    <string name="defense_iv">Defense IV:</string>
+    <string name="special_attack_iv">Special Attack IV:</string>
+    <string name="special_defense_iv">Special Defense IV:</string>
+    <string name="speed_iv">Speed IV:</string>
+    <string name="egg_group">Egg group:</string>
+    <string name="back">Back</string>
+    <string name="sell">Sell</string>
+    <string name="hp_iv_stat">TextView</string>
+    <string name="atk_iv_stat">TextView</string>
+    <string name="def_iv_stat">TextView</string>
+    <string name="spatk_iv_stat">TextView</string>
+    <string name="spdef_iv_stat">TextView</string>
+    <string name="spd_iv_stat">TextView</string>
+    <string name="egg_group_text">TextView</string>
+    <string name="value">Value:</string>
+    <string name="title_activity_store_page">StorePageActivity</string>
+    <string name="tab_text_1">Buy Items</string>
+    <string name="tab_text_2">Buy Pokémon</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

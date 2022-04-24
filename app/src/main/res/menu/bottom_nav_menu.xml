@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_party"
+        android:icon="@drawable/ic_baseline_whatshot_24"
+        android:title="@string/title_party" />
+
+    <item
+        android:id="@+id/navigation_daycare"
+        android:icon="@drawable/ic_baseline_child_friendly_24"
+        android:title="@string/title_daycare" />
+
+    <item
+        android:id="@+id/navigation_player_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/player_settings" />
+
+</menu>
