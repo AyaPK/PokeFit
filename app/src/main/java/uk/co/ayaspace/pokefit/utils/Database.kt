@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.preference.PreferenceManager
+import android.provider.ContactsContract
 import uk.co.ayaspace.pokefit.model.egg.Egg
 import uk.co.ayaspace.pokefit.model.pokemon.OwnedPokemon
 import me.sargunvohra.lib.pokekotlin.model.Pokemon
@@ -21,6 +22,14 @@ class Database(context: Context) {
         contentValues.put(DatabaseAdapter.OBJECT, `object`)
         contentValues.put(DatabaseAdapter.SPECIES, species)
         return dbb.insert(DatabaseAdapter.TABLE_NAME, null, contentValues)
+    }
+
+    fun insertItemData(name: String?, `object`: String?): Long {
+        val dbb = adapter.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put(DatabaseAdapter.NAME, name)
+        contentValues.put(DatabaseAdapter.OBJECT, `object`)
+        return dbb.insert(DatabaseAdapter.ITEM_TABLE_NAME, null, contentValues)
     }
 
     fun updateDaycareSlot(slot: String, `object`: String?) {
@@ -46,7 +55,6 @@ class Database(context: Context) {
                 val `object` = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseAdapter.OBJECT))
                 buffer.append("""
     ${name}___${`object`}___
-    
     """.trimIndent())
             }
             return buffer.toString()
@@ -113,7 +121,6 @@ class Database(context: Context) {
                 val species = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseAdapter.SPECIES))
                 buffer.append("""
     ${name}___${`object`}___$species
-    
     """.trimIndent())
             }
             return buffer.toString()
@@ -168,6 +175,12 @@ class Database(context: Context) {
         return false
     }
 
+    fun getTableSize(tableName: String): Int {
+        val db = adapter.writableDatabase
+        val cursor = db.rawQuery("SELECT * FROM $tableName", null)
+        return cursor.count
+    }
+
     fun updatePartyDetails(context: Context?) {
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         for (i in 1..6) {
@@ -193,6 +206,16 @@ class Database(context: Context) {
         editor.apply()
     }
 
+    fun dropTable(tableName: String) {
+        val db = adapter.writableDatabase
+        db.execSQL("DROP TABLE IF EXISTS $tableName")
+    }
+
+    fun clearTable(tableName: String) {
+        val db = adapter.writableDatabase
+        db.execSQL("DELETE FROM $tableName")
+    }
+
     class DatabaseAdapter(private val context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_Version) {
         override fun onCreate(db: SQLiteDatabase) {
             try {
@@ -201,6 +224,7 @@ class Database(context: Context) {
                 db.execSQL(CREATE_PLAYER_TABLE)
                 db.execSQL(CREATE_DAYCARE_TABLE)
                 db.execSQL(CREATE_CURRENCY_TABLE)
+                db.execSQL(CREATE_ITEM_TABLE)
                 for (i in 1..6) {
                     db.execSQL("INSERT INTO party VALUES($i, null);")
                 }
@@ -219,6 +243,7 @@ class Database(context: Context) {
                 db.execSQL(DROP_PKMN_TABLE)
                 db.execSQL(DROP_PARTY_TABLE)
                 db.execSQL(DROP_PLAYER_TABLE)
+                db.execSQL(DROP_ITEM_TABLE)
                 onCreate(db)
             } catch (e: Exception) {
                 println(e)
@@ -228,6 +253,7 @@ class Database(context: Context) {
         companion object {
             private const val DATABASE_NAME = "mainDatabase"
             const val TABLE_NAME = "pokemonFromApi"
+            const val ITEM_TABLE_NAME = "itemFromApi"
             private const val DATABASE_Version = 1
             const val NAME = "Name"
             const val OBJECT = "Object"
@@ -239,9 +265,11 @@ class Database(context: Context) {
             private const val CREATE_PLAYER_TABLE = "CREATE TABLE player(id VARCHAR(255), Object VARCHAR(255));"
             private const val CREATE_DAYCARE_TABLE = "CREATE TABLE daycare(Slot_number VARCHAR(255), Object VARCHAR(255));"
             private const val CREATE_CURRENCY_TABLE = "CREATE TABLE currency(Slot_number VARCHAR(255), Amount int);"
+            private const val CREATE_ITEM_TABLE = "CREATE TABLE itemFromApi (Name VARCHAR(255),Object VARCHAR(225));"
             private const val DROP_PKMN_TABLE = "DROP TABLE IF EXISTS pokemonFromApi"
             private const val DROP_PARTY_TABLE = "DROP TABLE IF EXISTS party"
             private const val DROP_PLAYER_TABLE = "DROP TABLE IF EXISTS player"
+            private const val DROP_ITEM_TABLE = "DROP TABLE IF EXISTS itemFromApi"
         }
     }
 

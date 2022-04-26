@@ -1,5 +1,6 @@
 package uk.co.ayaspace.pokefit.model.pokemon
 
+import me.sargunvohra.lib.pokekotlin.model.Item
 import uk.co.ayaspace.pokefit.model.utility.PartySlot
 
 class OwnedPokemon(
@@ -9,7 +10,7 @@ class OwnedPokemon(
     var mainType: String, var pokemonType: String, var species: String) : PartySlot(name) {
     private val stats: HashMap<String, Int>
     var ivs: HashMap<String, Int>
-    var heldItem: String? = null
+    var heldItem: Item? = null
     var pokeid: Int = 0
 
     init {
