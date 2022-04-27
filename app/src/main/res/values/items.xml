@@ -2,7 +2,7 @@
 <resources>
 
     <!-- PokéAPI ID's for important items -->
-    <integer name="everystone">206</integer>
+    <integer name="everstone">206</integer>
     <integer name="destiny_knot">257</integer>
     <integer name="power_bracer">266</integer>
     <integer name="power_belt">267</integer>
