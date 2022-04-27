@@ -82,6 +82,10 @@ class PokemonStatsScreenActivity : AppCompatActivity() {
         finish()
     }
 
+    fun onGiveItemButtonPressed(view: View?) {
+
+    }
+
     fun calculatePokemonValue(): Int {
         val ownedPokemon = gson.fromJson(pokemonString, OwnedPokemon::class.java)
         val atk = ownedPokemon.ivs["atk"]!!
@@ -96,4 +100,6 @@ class PokemonStatsScreenActivity : AppCompatActivity() {
 
         return (6 + atk + def + hp + spd + spatk + spdef) * mult
     }
+
+
 }

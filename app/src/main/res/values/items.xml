@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- PokéAPI ID's for important items -->
+    <integer name="everstone">206</integer>
+    <integer name="destiny_knot">257</integer>
+    <integer name="power_bracer">266</integer>
+    <integer name="power_belt">267</integer>
+    <integer name="power_lens">268</integer>
+    <integer name="power_band">269</integer>
+    <integer name="power_anklet">270</integer>
+    <integer name="power_weight">271</integer>
+    <integer name="oval_charm">674</integer>
+
+    <!-- Array of these ID's for iterative purposes -->
+    <integer-array name="itemIDs">
+        <item>206</item>
+        <item>257</item>
+        <item>266</item>
+        <item>267</item>
+        <item>268</item>
+        <item>269</item>
+        <item>270</item>
+        <item>271</item>
+        <item>674</item>
+    </integer-array>
+
+</resources>
